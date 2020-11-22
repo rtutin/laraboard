@@ -22,6 +22,7 @@
             </div>
 
             <!-- Settings Dropdown -->
+            @if (Auth::user() !== null)
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -104,6 +105,7 @@
                     </x-slot>
                 </x-jet-dropdown>
             </div>
+            @endif
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
@@ -126,6 +128,7 @@
         </div>
 
         <!-- Responsive Settings Options -->
+        @if (Auth::user() !== null)
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">
                 <div class="flex-shrink-0">
@@ -191,5 +194,6 @@
                 @endif
             </div>
         </div>
+        @endif
     </div>
 </nav>

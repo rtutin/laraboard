@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Board;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Posts;
 
@@ -23,3 +24,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('posts', Posts::class)->name('posts');
+Route::get('board', Board::class)->name('board');
+Route::get('board/{id}', Board::class)->name('board');
